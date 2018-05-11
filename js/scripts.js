@@ -2,17 +2,17 @@
 jQuery(document).ready(function($) {
 
     // nprogress开始
-    NProgress.configure({
-        showSpinner: false,
-        speed: 300
-    });
+    // NProgress.configure({
+    //     showSpinner: false,
+    //     speed: 300
+    // });
     // NProgress.start();
 
     // pjax nprogress
-    $(document).on("pjax:start", function() {
-        NProgress.start();
-        $("main").removeClass("main-fadein");
-    });
+    // $(document).on("pjax:start", function() {
+    //     NProgress.start();
+    //     $("main").removeClass("main-fadein");
+    // });
     $(document).on("pjax:end", function() {
         NProgress.done();
         $("main").addClass("main-fadein");
@@ -50,32 +50,6 @@ jQuery(document).ready(function($) {
         },
     });
 
-    // 页面全屏按钮
-    var viewFullScreen = document.getElementById("fullscreen-view");
-    var exitFullScreen = document.getElementById("fullscreen-exit");
-    $(exitFullScreen).hide();
-    if (viewFullScreen) {
-        viewFullScreen.addEventListener("click", function() {
-            if (document.documentElement.requestFullscreen) {
-                document.documentElement.requestFullscreen();
-            } else if (document.documentElement.webkitRequestFullScreen) {
-                document.documentElement.webkitRequestFullScreen();
-            }
-            $('#fullscreen-view').hide();
-            $('#fullscreen-exit').show();
-        });
-    }
-    if (exitFullScreen) {
-        exitFullScreen.addEventListener("click", function() {
-            if (document.exitFullscreen) {
-                document.exitFullscreen();
-            } else if (document.webkitCancelFullScreen) {
-                document.webkitCancelFullScreen();
-            }
-            $('#fullscreen-exit').hide();
-            $('#fullscreen-view').show();
-        });
-    }
 
     // 右侧边栏按钮激活样式
     $("#modal-sidebar").on("show.bs.modal", function() {
@@ -88,71 +62,16 @@ jQuery(document).ready(function($) {
     // tooltip
     $('[action="tooltip"]').tooltip();
 
-    // tab
-    $('[action="tab-body"]').tabbedContent();
-
-    // 卡片全屏
-    $('[action="card-fullscreen"]').on("click", function() {
-        $(this).parent().parent().parent('.card').toggleClass('card-fullscreen');
-        $(this).children('.icon-enlarge').toggleClass('icon-narrow');
-        if ($(this).parent().parent().siblings().children().hasClass('highcharts')) {
-            $(this).parent().parent().parent('.card').toggleClass('card-chart-fullscreen');
-            $(this).parent().parent().siblings().children('.highcharts').highcharts().reflow();
-        }
-    });
-
-    // 代码块
-    $('.code-group .code-title').on("click", function() {
-        $(this).siblings('pre').toggleClass('show');
-    });
 
     // waves
     Waves.init();
     Waves.attach('button.button, a.button');
-
-    // validate
-    (function(factory) {
-        if (typeof define === "function" && define.amd) {
-            define(["jquery", "../jquery.validate"], factory);
-        } else {
-            factory(jQuery);
-        }
-    }(function($) {
-        $.extend($.validator.messages, {
-            required: "这是必填字段",
-            remote: "请修正此字段",
-            email: "请输入有效的电子邮件地址",
-            url: "请输入有效的网址",
-            date: "请输入有效的日期",
-            dateISO: "请输入有效的日期 (YYYY-MM-DD)",
-            number: "请输入有效的数字",
-            digits: "只能输入数字",
-            creditcard: "请输入有效的信用卡号码",
-            equalTo: "你的输入不相同",
-            extension: "请输入有效的后缀",
-            maxlength: $.validator.format("最多可以输入 {0} 个字符"),
-            minlength: $.validator.format("最少要输入 {0} 个字符"),
-            rangelength: $.validator.format("请输入长度在 {0} 到 {1} 之间的字符串"),
-            range: $.validator.format("请输入范围在 {0} 到 {1} 之间的数值"),
-            max: $.validator.format("请输入不大于 {0} 的数值"),
-            min: $.validator.format("请输入不小于 {0} 的数值")
-        });
-    }));
-    $.validator.setDefaults({
-        errorPlacement: function(error, element) {
-            error.appendTo(element.parents('.form-group').children('.label'));
-        }
-    });
 
     // 窗口加载完成
     $(window).on("load", function() {
         // nprogress完成
         // NProgress.done();
         // 主导航滚动条
-        $(".side-nav").mCustomScrollbar({
-            autoHideScrollbar: true,
-            scrollInertia: 300
-        });
 
     });
 

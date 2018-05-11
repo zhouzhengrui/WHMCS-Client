@@ -2,13 +2,9 @@
 
 [更新记录](#update) / [相关备注](#relevant)
 
-## GitHub Pages
-
-<https://zhouzhengrui.github.io/zhiye-admin/>
-
 ## Update
 
-### 2017-11-29
+### 2018-5-11
 
 - 新建项目
 
