@@ -190,7 +190,7 @@ input:-webkit-autofill {
 
 header {
   position: fixed;
-  z-index: 2;
+  z-index: 99;
   top: 0;
   left: 0;
   right: 0;
@@ -254,7 +254,9 @@ nav.nav {
         color: #ffffff; }
 
 main {
-  padding-top: 50px; }
+  padding-top: 50px;
+  position: relative;
+  z-index: 1; }
   main.main-fadein .banner {
     animation: fadeInDown 0.5s ease; }
   main.main-fadein .container-fluid {
@@ -3423,9 +3425,7 @@ button.button-collapse, a.button-collapse, input.button-collapse {
 
 .popover {
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 3;
+  z-index: 2;
   display: block;
   max-width: 275px;
   margin-top: 8px;
