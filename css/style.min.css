@@ -1701,11 +1701,11 @@ input.highcharts-range-selector {
 
 .modal {
   position: fixed;
-  top: 55px;
-  left: 255px;
+  top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 4;
   display: none;
   overflow: hidden; }
   .modal.show .modal-dialog {
@@ -1730,7 +1730,7 @@ input.highcharts-range-selector {
 
 .modal-dialog {
   position: relative;
-  width: 80%;
+  width: 700px;
   margin: 0 auto;
   top: 50%;
   opacity: 0;
@@ -1743,10 +1743,11 @@ input.highcharts-range-selector {
 
 .modal-backdrop {
   position: fixed;
-  top: 55px;
+  z-index: 3;
+  top: 0;
   right: 0;
   bottom: 0;
-  left: 255px;
+  left: 0;
   transition: all .3s;
   background-color: rgba(37, 37, 37, 0.3); }
   .modal-backdrop.fade {
@@ -1890,6 +1891,9 @@ input.highcharts-range-selector {
     padding-right: 10px;
     padding-left: 10px; }
 
+fieldset.form-group {
+  margin-bottom: 15px; }
+
 .form-group {
   position: relative;
   min-width: 0px;
@@ -1897,7 +1901,9 @@ input.highcharts-range-selector {
   border-style: initial;
   border-color: initial;
   border-image: initial; }
-  .form-group .label {
+  .form-group legend.label {
+    margin-bottom: 5px; }
+  .form-group p.label {
     white-space: nowrap;
     margin-right: 15px; }
   .form-group .input {
@@ -3469,28 +3475,28 @@ button.button-collapse, a.button-collapse, input.button-collapse {
   padding: 50px 0 30px;
   margin-bottom: 30px;
   background-color: #f4f4f4; }
-  .banner .banner-title {
-    margin-bottom: 25px; }
-    .banner .banner-title .title {
-      font-weight: 600; }
-      .banner .banner-title .title small {
-        margin-left: 20px;
-        color: #909090;
-        font-size: 14px;
-        font-weight: normal;
-        font-family: Arial, Helvetica, sans-serif; }
-    .banner .banner-title p {
-      margin-top: 5px;
-      color: #909090; }
-  .banner .banner-action .form {
-    display: flex;
-    align-items: center; }
-  .banner .banner-action .form-group {
-    display: flex;
-    align-items: center;
-    width: 250px;
-    margin-right: 30px;
-    margin-bottom: 0; }
+  .banner .banner-title .title {
+    font-weight: 600; }
+    .banner .banner-title .title small {
+      margin-left: 20px;
+      color: #909090;
+      font-size: 14px;
+      font-weight: normal;
+      font-family: Arial, Helvetica, sans-serif; }
+  .banner .banner-title p {
+    margin-top: 5px;
+    color: #909090; }
+  .banner .banner-action {
+    margin-top: 25px; }
+    .banner .banner-action .form {
+      display: flex;
+      align-items: center; }
+    .banner .banner-action .form-group {
+      display: flex;
+      align-items: center;
+      width: 250px;
+      margin-right: 30px;
+      margin-bottom: 0; }
 
 .dashboard {
   display: flex;
@@ -3581,7 +3587,7 @@ button.button-collapse, a.button-collapse, input.button-collapse {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 20px;
+    padding: 15px 30px;
     border-top: 1px solid #ededed; }
   .card .card-body {
     padding: 30px; }
@@ -3684,6 +3690,31 @@ button.button-collapse, a.button-collapse, input.button-collapse {
     transition: all .3s; }
     .multicalendar-nav .arrow:hover {
       color: #ffc000; }
+  .multicalendar-nav .years {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; }
+    .multicalendar-nav .years .text {
+      position: relative;
+      height: 50px;
+      line-height: 50px;
+      color: #aaaaaa; }
+      .multicalendar-nav .years .text.active {
+        color: #303030; }
+        .multicalendar-nav .years .text.active:before {
+          content: '';
+          display: block;
+          width: 9px;
+          height: 9px;
+          position: absolute;
+          bottom: -4px;
+          left: -4.5px;
+          margin-left: 50%;
+          border-radius: 50%;
+          background-color: #ffc000; }
+      .multicalendar-nav .years .text:hover {
+        color: #606060; }
 
 .list-multicalendar {
   margin: -30px; }
@@ -3739,6 +3770,37 @@ button.button-collapse, a.button-collapse, input.button-collapse {
             border-color: #f0b400;
             background-color: #ffc000;
             cursor: pointer; }
+
+table.table {
+  width: 100%;
+  max-width: 100%; }
+  table.table thead th {
+    text-align: left; }
+  table.table tbody tr {
+    transition: background-color .3s; }
+    table.table tbody tr:hover {
+      background-color: #fbfbfb; }
+    table.table tbody tr:last-child td {
+      border-bottom: 0; }
+  table.table td,
+  table.table th {
+    padding: 15px 30px;
+    border-bottom: 1px solid #ededed; }
+  table.table .info {
+    display: flex;
+    align-items: center; }
+    table.table .info p {
+      font-size: 16px;
+      font-weight: bold; }
+  table.table .image {
+    width: 90px;
+    height: 90px;
+    margin-right: 20px;
+    overflow: hidden;
+    border-radius: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
 
 .collapse-body {
   padding: 15px 30px;
@@ -4149,38 +4211,6 @@ ul.tab {
       color: #C5C5CA;
       border-color: #ffffff;
       background-color: #ffffff; }
-
-table.table {
-  width: 100%;
-  max-width: 100%;
-  background-color: transparent; }
-  table.table tbody tr {
-    transition: background-color .3s; }
-    table.table tbody tr:hover {
-      background-color: #f4f4f4; }
-    table.table tbody tr:last-child td,
-    table.table tbody tr:last-child th {
-      border-bottom: 0; }
-  table.table td,
-  table.table th {
-    padding: 10px;
-    border-bottom: 1px solid #ededed; }
-  table.table .radiocheckbox-replace {
-    margin-right: 0; }
-  table.table .image {
-    width: 50px;
-    height: 50px;
-    overflow: hidden;
-    border-radius: 0;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; }
-  @media (max-width: 991px) {
-    .table-responsive {
-      display: block;
-      overflow-x: auto; }
-      .table-responsive > tbody > tr > td {
-        white-space: nowrap; } }
 
 .page {
   width: 100%;
