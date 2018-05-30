@@ -22,36 +22,42 @@
             <!-- brand start -->
             <div class="brand">
                 <h3 class="title">WHMCS<span>Client</span></h3>
+                <!-- <img src="img/logo-footer.png"> -->
             </div>
             <!-- brand start -->
+            <button class="nav-toggler collapsed" type="button" data-toggle="collapse" data-target="#nav">
+               <i class="icon-list"></i>
+            </button>
             <!-- nav start -->
-            <nav class="nav">
-                <a href="index.html" class="item ">home</a>
-                <a href="properties.html" class="item ">properties</a>
-                <a href="multicalendar.html" class="item active">multicalendar</a>
-                <a href="income.html" class="item ">income</a>
-                <a href="statements.html" class="item ">statements</a>
+            <nav class="nav collapse" id="nav">
                 <!-- user start -->
+                <!-- 已登录状态 -->
                 <div class="user dropdown">
                     <button type="button" data-toggle="dropdown">
                         <span>Hello! Allen</span>
                         <i class="icon-arrow-down"></i>
                     </button>
                     <div class="dropdown-menu">
-                        <a class="item" href="#">
-                            <p>item</p>
-                        </a>
-                        <a class="item" href="#">
-                            <p>item</p>
-                        </a>
-                        <a class="item" href="#">
-                            <p>item</p>
-                        </a>
+                        <a class="item" href="login.html">Login</a>
+                        <a class="item" href="forgot-password.html">Forgot Password</a>
+                        <a class="item" href="404.html">404</a>
                         <div class="dropdown-divider"></div>
-                        <a class="item" href="#">Sign out</a>
+                        <a class="item" href="logout.html">Sign out</a>
                     </div>
                 </div>
+                <!-- 未登录状态 -->
+                <!-- <div class="user not-login">
+                    <a href="login.html">
+                        <span>Login</span>
+                        <i class="icon-go d-lg-none"></i>
+                    </a>
+                </div> -->
                 <!-- user over -->
+                <a href="index.html" class="item ">home</a>
+                <a href="properties.html" class="item ">properties</a>
+                <a href="multicalendar.html" class="item active">multicalendar</a>
+                <a href="income.html" class="item ">income</a>
+                <a href="statements.html" class="item ">statements</a>
             </nav>
             <!-- nav over -->
         </div>
@@ -63,30 +69,43 @@
         <!-- banner start -->
         <div class="banner">
             <div class="container">
-                <!-- title start -->
-                <div class="banner-title">
-                    <h1 class="title">MULTICALENDAR<small>All your bookings in a clear calendar view.</small></h1>
+                <!-- row start -->
+                <div class="row">
+                    <div class="col">
+                        <!-- title start -->
+                        <div class="banner-title">
+                            <h2 class="title">MULTICALENDAR</h2>
+                            <small>All your bookings in a clear calendar view.</small>
+                        </div>
+                        <!-- title over -->
+                    </div>
                 </div>
-                <!-- title over -->
+                <!-- row over -->
                 <!-- form start -->
-                <div class="banner-action">
-                    <form action="" class="form">
-                        <div class="form-group">
-                            <p class="label">Property Name</p>
-                            <input class="input" type="text" placeholder="filter by">
+                <form action="" class="form">
+                    <div class="row banner-action">
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="form-group">
+                                <p class="label">Property Name</p>
+                                <input class="input" type="text" placeholder="filter by">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <p class="label">Location</p>
-                            <input class="input" type="text" placeholder="filter by">
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="form-group">
+                                <p class="label">Location</p>
+                                <input class="input" type="text" placeholder="filter by">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <p class="label">Sort by</p>
-                            <select class="select">
-                                <option>Properties Name</option>
-                            </select>
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="form-group">
+                                <p class="label">Sort by</p>
+                                <select class="select">
+                                    <option>Properties Name</option>
+                                </select>
+                            </div>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
                 <!-- form over -->
             </div>
         </div>
@@ -95,21 +114,27 @@
         <div class="multicalendar-nav">
             <div class="container">
                 <div class="year">
-                    <a href="#" class="arrow"><i class="icon-back"></i></a>
+                    <a href="#" class="arrow arrow-prev"><i class="icon-back"></i></a>
                     <p class="text">2018</p>
-                    <a href="#" class="arrow"><i class="icon-go"></i></a>
+                    <a href="#" class="arrow arrow-next arrow-disabled"><i class="icon-go"></i></a>
                 </div>
-                <div class="month">
-                    <a href="#" class="arrow"><i class="icon-back"></i></a>
-                    <a href="#" class="text active">May</a>
-                    <a href="#" class="text">June</a>
-                    <a href="#" class="text">July</a>
-                    <a href="#" class="text">August</a>
-                    <a href="#" class="text">September</a>
-                    <a href="#" class="text">October</a>
-                    <a href="#" class="text">November</a>
-                    <a href="#" class="text">December</a>
-                    <a href="#" class="arrow"><i class="icon-go"></i></a>
+                <div class="swiper-container months" id="month">
+                    <div class="swiper-wrapper">
+                        <a href="#" id="month1" class="text swiper-slide">January</a>
+                        <a href="#" id="month2" class="text swiper-slide">February</a>
+                        <a href="#" id="month3" class="text swiper-slide">March</a>
+                        <a href="#" id="month4" class="text swiper-slide">April</a>
+                        <a href="#" id="month5" class="text swiper-slide">May</a>
+                        <a href="#" id="month6" class="text swiper-slide">June</a>
+                        <a href="#" id="month7" class="text swiper-slide">July</a>
+                        <a href="#" id="month8" class="text swiper-slide">August</a>
+                        <a href="#" id="month9" class="text swiper-slide">September</a>
+                        <a href="#" id="month10" class="text swiper-slide">October</a>
+                        <a href="#" id="month11" class="text swiper-slide">November</a>
+                        <a href="#" id="month12" class="text swiper-slide">December</a>
+                    </div>
+                    <div class="arrow swiper-button-prev"><i class="icon-back"></i></div>
+                    <div class="arrow swiper-button-next"><i class="icon-go"></i></div>
                 </div>
             </div>
         </div>
@@ -823,7 +848,7 @@
     <!-- footer start -->
     <footer>
         <div class="container">
-            <img src="img/logo-footer.png">
+            <img class="d-none d-sm-block" src="img/logo-footer.png">
             <p>© weavero.co 2018 All rights reserved.</p>
         </div>
     </footer>
@@ -838,6 +863,7 @@
     <script src="js/highcharts/highcharts.js"></script>
     <script src="js/highcharts/highcharts-more.js"></script>
     <script src="js/highcharts/modules/exporting.js"></script>
+    <script src="js/swiper/swiper.min.js"></script>
     <!-- endbuild -->
     <script src="js/laydate/laydate.js"></script>
     <script src="js/scripts.js"></script>
@@ -845,9 +871,32 @@
 
     <!-- page script start -->
     <script type="text/javascript">
+        // swiper-month
+        var mySwiper = new Swiper('#month', {
+            init: false,
+            hashNavigation: true,
+            slidesPerView: 6,
+            slidesPerGroup: 6,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        // jQuery
         jQuery(document).ready(function($) {
             // popover
-            $('[data-toggle="popover"]').popover()
+            $('[data-toggle="popover"]').popover();
+            // month
+            $('#months .swiper-slide').on("click", function() {
+                $(this).addClass('active');
+                $(this).siblings().removeClass('active');
+            });
+            mySwiper.init(); //初始化
+
+            mySwiper.slideTo(11, 1000, false); //切换到第*个slide，速度为1秒
+            $('#month11').addClass('active');
+            $('#month11').siblings().removeClass('active');
+
         });
     </script>
     <!-- page script over -->

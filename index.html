@@ -22,36 +22,42 @@
             <!-- brand start -->
             <div class="brand">
                 <h3 class="title">WHMCS<span>Client</span></h3>
+                <!-- <img src="img/logo-footer.png"> -->
             </div>
             <!-- brand start -->
+            <button class="nav-toggler collapsed" type="button" data-toggle="collapse" data-target="#nav">
+               <i class="icon-list"></i>
+            </button>
             <!-- nav start -->
-            <nav class="nav">
-                <a href="index.html" class="item active">home</a>
-                <a href="properties.html" class="item ">properties</a>
-                <a href="multicalendar.html" class="item ">multicalendar</a>
-                <a href="income.html" class="item ">income</a>
-                <a href="statements.html" class="item ">statements</a>
+            <nav class="nav collapse" id="nav">
                 <!-- user start -->
+                <!-- 已登录状态 -->
                 <div class="user dropdown">
                     <button type="button" data-toggle="dropdown">
                         <span>Hello! Allen</span>
                         <i class="icon-arrow-down"></i>
                     </button>
                     <div class="dropdown-menu">
-                        <a class="item" href="#">
-                            <p>item</p>
-                        </a>
-                        <a class="item" href="#">
-                            <p>item</p>
-                        </a>
-                        <a class="item" href="#">
-                            <p>item</p>
-                        </a>
+                        <a class="item" href="login.html">Login</a>
+                        <a class="item" href="forgot-password.html">Forgot Password</a>
+                        <a class="item" href="404.html">404</a>
                         <div class="dropdown-divider"></div>
-                        <a class="item" href="#">Sign out</a>
+                        <a class="item" href="logout.html">Sign out</a>
                     </div>
                 </div>
+                <!-- 未登录状态 -->
+                <!-- <div class="user not-login">
+                    <a href="login.html">
+                        <span>Login</span>
+                        <i class="icon-go d-lg-none"></i>
+                    </a>
+                </div> -->
                 <!-- user over -->
+                <a href="index.html" class="item active">home</a>
+                <a href="properties.html" class="item ">properties</a>
+                <a href="multicalendar.html" class="item ">multicalendar</a>
+                <a href="income.html" class="item ">income</a>
+                <a href="statements.html" class="item ">statements</a>
             </nav>
             <!-- nav over -->
         </div>
@@ -63,43 +69,57 @@
         <!-- banner start -->
         <div class="banner">
             <div class="container">
-                <!-- title start -->
-                <div class="banner-title">
-                    <h1 class="title">Welcome back, Allen!</h1>
+                <!-- row start -->
+                <div class="row">
+                    <div class="col">
+                        <!-- title start -->
+                        <div class="banner-title">
+                            <h2 class="title">Welcome back, Allen!</h2>
+                        </div>
+                        <!-- title over -->
+                    </div>
                 </div>
-                <!-- title over -->
+                <!-- row over -->
                 <!-- dashboard start -->
-                <div class="dashboard">
+                <div class="row dashboard">
                     <!-- item start -->
-                    <div class="item">
-                        <i class="icon-properties"></i>
-                        <h5 class="title">properties</h5>
-                        <p class="number">12</p>
-                        <a href="properties.html" class="button button-block">read more</a>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="item">
+                            <i class="icon-properties"></i>
+                            <h5 class="title">properties</h5>
+                            <p class="number">12</p>
+                            <a href="properties.html" class="button button-block">read more</a>
+                        </div>
                     </div>
                     <!-- item over -->
                     <!-- item start -->
-                    <div class="item">
-                        <i class="icon-guests"></i>
-                        <h5 class="title">guests</h5>
-                        <p class="number">26</p>
-                        <a href="guests.html" class="button button-block">read more</a>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="item">
+                            <i class="icon-guests"></i>
+                            <h5 class="title">guests</h5>
+                            <p class="number">26</p>
+                            <a href="guests.html" class="button button-block">read more</a>
+                        </div>
                     </div>
                     <!-- item over -->
                     <!-- item start -->
-                    <div class="item">
-                        <i class="icon-income"></i>
-                        <h5 class="title">income</h5>
-                        <p class="number">1800<span>.00</span></p>
-                        <a href="income.html" class="button button-block">read more</a>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="item">
+                            <i class="icon-income"></i>
+                            <h5 class="title">income</h5>
+                            <p class="number">1800<span>.00</span></p>
+                            <a href="income.html" class="button button-block">read more</a>
+                        </div>
                     </div>
                     <!-- item over -->
                     <!-- item start -->
-                    <div class="item">
-                        <i class="icon-statements"></i>
-                        <h5 class="title">statements</h5>
-                        <p class="number">45</p>
-                        <a href="statements.html" class="button button-block">read more</a>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="item">
+                            <i class="icon-statements"></i>
+                            <h5 class="title">statements</h5>
+                            <p class="number">45</p>
+                            <a href="statements.html" class="button button-block">read more</a>
+                        </div>
                     </div>
                     <!-- item over -->
                 </div>
@@ -113,63 +133,73 @@
             <section class="card">
                 <div class="card-header">
                     <h3 class="title">STATS<small>In the last 7 days</small></h3>
-                    <p class="text">Last stat data update: 07/05/2018 @ 12:57</p>
+                    <p class="text d-none d-md-block">Last stat data update: 07/05/2018 @ 12:57</p>
                 </div>
                 <div class="card-body">
-                    <div class="stats-group">
-                        <div class="highcharts" id="chart-1" style="width:800px; height:400px;"></div>
-                        <div class="highcharts-action">
-                            <form action="" class="form">
-                                <!-- item start -->
-                                <div class="form-group">
-                                    <label class="radiocheckbox-item">
-                                        <input class="radiocheckbox" type="radio" name="radio-1" checked>
-                                        <span class="radiocheckbox-replace"></span>
-                                        <p>Last 7 days</p>
-                                    </label>
+                    <div class="row stats-group">
+                        <div class="col-12 col-lg-9">
+                            <div class="highcharts" id="chart-1" style="width:100%; height:400px;"></div>
+                        </div>
+                        <div class="col-12 col-lg-3">
+                            <div class="highcharts-action">
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-12">
+                                        <form action="" class="form">
+                                            <!-- item start -->
+                                            <div class="form-group">
+                                                <label class="radiocheckbox-item">
+                                                    <input class="radiocheckbox" type="radio" name="radio-1" checked>
+                                                    <span class="radiocheckbox-replace"></span>
+                                                    <p>Last 7 days</p>
+                                                </label>
+                                            </div>
+                                            <!-- item over -->
+                                            <!-- item start -->
+                                            <div class="form-group">
+                                                <label class="radiocheckbox-item">
+                                                    <input class="radiocheckbox" type="radio" name="radio-1">
+                                                    <span class="radiocheckbox-replace"></span>
+                                                    <p>Last 14 days</p>
+                                                </label>
+                                            </div>
+                                            <!-- item over -->
+                                            <!-- item start -->
+                                            <div class="form-group">
+                                                <label class="radiocheckbox-item">
+                                                    <input class="radiocheckbox" type="radio" name="radio-1">
+                                                    <span class="radiocheckbox-replace"></span>
+                                                    <p>Last 30 days</p>
+                                                </label>
+                                            </div>
+                                            <!-- item over -->
+                                            <!-- item start -->
+                                            <div class="form-group">
+                                                <label class="radiocheckbox-item">
+                                                    <input class="radiocheckbox" type="radio" name="radio-1">
+                                                    <span class="radiocheckbox-replace"></span>
+                                                    <p>Last year</p>
+                                                </label>
+                                            </div>
+                                            <!-- item over -->
+                                            <!-- item start -->
+                                            <div class="form-group d-none d-md-block">
+                                                <label class="input-addon">
+                                                    <input type="text" class="input" action="date" id="date-1">
+                                                    <span class="addon"><i class="icon-calendar"></i></span>
+                                                </label>
+                                            </div>
+                                            <!-- item over -->
+                                        </form>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-12">
+                                        <div class="info">
+                                            <h5 class="title">Guests</h5>
+                                            <p class="number">26</p>
+                                            <h5 class="title">Income </h5>
+                                            <p class="number">$18000<span>.00</span></p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <!-- item over -->
-                                <!-- item start -->
-                                <div class="form-group">
-                                    <label class="radiocheckbox-item">
-                                        <input class="radiocheckbox" type="radio" name="radio-1">
-                                        <span class="radiocheckbox-replace"></span>
-                                        <p>Last 14 days</p>
-                                    </label>
-                                </div>
-                                <!-- item over -->
-                                <!-- item start -->
-                                <div class="form-group">
-                                    <label class="radiocheckbox-item">
-                                        <input class="radiocheckbox" type="radio" name="radio-1">
-                                        <span class="radiocheckbox-replace"></span>
-                                        <p>Last 30 days</p>
-                                    </label>
-                                </div>
-                                <!-- item over -->
-                                <!-- item start -->
-                                <div class="form-group">
-                                    <label class="radiocheckbox-item">
-                                        <input class="radiocheckbox" type="radio" name="radio-1">
-                                        <span class="radiocheckbox-replace"></span>
-                                        <p>Last year</p>
-                                    </label>
-                                </div>
-                                <!-- item over -->
-                                <!-- item start -->
-                                <div class="form-group">
-                                    <label class="input-addon">
-                                        <input type="text" class="input" action="date" id="date-1">
-                                        <span class="addon"><i class="icon-calendar"></i></span>
-                                    </label>
-                                </div>
-                                <!-- item over -->
-                            </form>
-                            <div class="info">
-                                <h5 class="title">Guests</h5>
-                                <p class="number">26</p>
-                                <h5 class="title">Income </h5>
-                                <p class="number">$18000<span>.00</span></p>
                             </div>
                         </div>
                     </div>
@@ -183,7 +213,7 @@
     <!-- footer start -->
     <footer>
         <div class="container">
-            <img src="img/logo-footer.png">
+            <img class="d-none d-sm-block" src="img/logo-footer.png">
             <p>© weavero.co 2018 All rights reserved.</p>
         </div>
     </footer>
@@ -198,6 +228,7 @@
     <script src="js/highcharts/highcharts.js"></script>
     <script src="js/highcharts/highcharts-more.js"></script>
     <script src="js/highcharts/modules/exporting.js"></script>
+    <script src="js/swiper/swiper.min.js"></script>
     <!-- endbuild -->
     <script src="js/laydate/laydate.js"></script>
     <script src="js/scripts.js"></script>
@@ -240,9 +271,10 @@
                     },
                 },
                 tooltip: {
+                    borderRadius: 0,
                     formatter: function() {
-                        return '<p>' + Highcharts.dateFormat(this.x) + '</p>' +
-                            '<p>' + '$' + Highcharts.numberFormat(this.y, 2) + '</p>';
+                        return '<p>' + this.x + '</p>' +
+                            '<p><b>' + '$' + this.y + '</b></p>';
                     }
                 },
                 legend: {

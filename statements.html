@@ -22,36 +22,42 @@
             <!-- brand start -->
             <div class="brand">
                 <h3 class="title">WHMCS<span>Client</span></h3>
+                <!-- <img src="img/logo-footer.png"> -->
             </div>
             <!-- brand start -->
+            <button class="nav-toggler collapsed" type="button" data-toggle="collapse" data-target="#nav">
+               <i class="icon-list"></i>
+            </button>
             <!-- nav start -->
-            <nav class="nav">
-                <a href="index.html" class="item ">home</a>
-                <a href="properties.html" class="item ">properties</a>
-                <a href="multicalendar.html" class="item ">multicalendar</a>
-                <a href="income.html" class="item ">income</a>
-                <a href="statements.html" class="item active">statements</a>
+            <nav class="nav collapse" id="nav">
                 <!-- user start -->
+                <!-- 已登录状态 -->
                 <div class="user dropdown">
                     <button type="button" data-toggle="dropdown">
                         <span>Hello! Allen</span>
                         <i class="icon-arrow-down"></i>
                     </button>
                     <div class="dropdown-menu">
-                        <a class="item" href="#">
-                            <p>item</p>
-                        </a>
-                        <a class="item" href="#">
-                            <p>item</p>
-                        </a>
-                        <a class="item" href="#">
-                            <p>item</p>
-                        </a>
+                        <a class="item" href="login.html">Login</a>
+                        <a class="item" href="forgot-password.html">Forgot Password</a>
+                        <a class="item" href="404.html">404</a>
                         <div class="dropdown-divider"></div>
-                        <a class="item" href="#">Sign out</a>
+                        <a class="item" href="logout.html">Sign out</a>
                     </div>
                 </div>
+                <!-- 未登录状态 -->
+                <!-- <div class="user not-login">
+                    <a href="login.html">
+                        <span>Login</span>
+                        <i class="icon-go d-lg-none"></i>
+                    </a>
+                </div> -->
                 <!-- user over -->
+                <a href="index.html" class="item ">home</a>
+                <a href="properties.html" class="item ">properties</a>
+                <a href="multicalendar.html" class="item ">multicalendar</a>
+                <a href="income.html" class="item ">income</a>
+                <a href="statements.html" class="item active">statements</a>
             </nav>
             <!-- nav over -->
         </div>
@@ -63,115 +69,109 @@
         <!-- banner start -->
         <div class="banner">
             <div class="container">
-                <!-- title start -->
-                <div class="banner-title">
-                    <h1 class="title">STATEMENTS</h1>
+                <!-- row start -->
+                <div class="row">
+                    <div class="col">
+                        <!-- title start -->
+                        <div class="banner-title">
+                            <h2 class="title">STATEMENTS</h2>
+                        </div>
+                        <!-- title over -->
+                    </div>
                 </div>
-                <!-- title over -->
+                <!-- row over -->
             </div>
         </div>
         <!-- banner over -->
         <!-- nav start -->
         <div class="multicalendar-nav">
             <div class="container">
-                <div class="years">
-                    <a href="#" class="arrow"><i class="icon-back"></i></a>
-                    <a href="#" class="text active">2018</a>
-                    <a href="#" class="text">2017</a>
-                    <a href="#" class="text">2016</a>
-                    <a href="#" class="text">2015</a>
-                    <a href="#" class="text">2014</a>
-                    <a href="#" class="text">2013</a>
-                    <a href="#" class="text">2012</a>
-                    <a href="#" class="text">2011</a>
-                    <a href="#" class="arrow"><i class="icon-go"></i></a>
+                <div class="swiper-container years" id="years">
+                    <div class="swiper-wrapper">
+                        <a href="#" id="year2018" class="text swiper-slide">2018</a>
+                        <a href="#" id="year2017" class="text swiper-slide">2017</a>
+                        <a href="#" id="year2016" class="text swiper-slide">2016</a>
+                        <a href="#" id="year2015" class="text swiper-slide">2015</a>
+                        <a href="#" id="year2014" class="text swiper-slide">2014</a>
+                    </div>
+                    <div class="arrow swiper-button-prev"><i class="icon-back"></i></div>
+                    <div class="arrow swiper-button-next"><i class="icon-go"></i></div>
                 </div>
             </div>
         </div>
         <!-- nav over -->
         <!-- container start -->
         <div class="container">
-            <section class="card">
-                <!-- table start -->
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>
-                                <div class="form-group">
-                                    <label class="radiocheckbox-item">
-                                        <input class="radiocheckbox" type="checkbox">
-                                        <span class="radiocheckbox-replace"></span>
-                                        <p>Select All</p>
-                                    </label>
-                                </div>
-                            </th>
-                            <th>Download</th>
-                            <th>Email</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div class="form-group">
-                                    <label class="radiocheckbox-item">
-                                        <input class="radiocheckbox" type="checkbox">
-                                        <span class="radiocheckbox-replace"></span>
-                                        <p><b>Issued on 11 Apr 2018</b></p>
-                                    </label>
-                                </div>
-                            </td>
-                            <td><a class="button button-small" href="#">Download</a></td>
-                            <td><a class="button button-small" href="#" data-toggle="modal" data-target="#demo">Email</a></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="form-group">
-                                    <label class="radiocheckbox-item">
-                                        <input class="radiocheckbox" type="checkbox">
-                                        <span class="radiocheckbox-replace"></span>
-                                        <p><b>Issued on 11 Apr 2018</b></p>
-                                    </label>
-                                </div>
-                            </td>
-                            <td><a class="button button-small" href="#">Download</a></td>
-                            <td><a class="button button-small" href="#" data-toggle="modal" data-target="#demo">Email</a></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="form-group">
-                                    <label class="radiocheckbox-item">
-                                        <input class="radiocheckbox" type="checkbox">
-                                        <span class="radiocheckbox-replace"></span>
-                                        <p><b>Issued on 11 Apr 2018</b></p>
-                                    </label>
-                                </div>
-                            </td>
-                            <td><a class="button button-small" href="#">Download</a></td>
-                            <td><a class="button button-small" href="#" data-toggle="modal" data-target="#demo">Email</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <!-- table over -->
-                <div class="card-footer">
-                    <div class="button-group">
-                        <a class="button" href="#">Download Selected</a>
-                        <a class="button" href="#" data-toggle="modal" data-target="#demo">Email Selected</a>
-                    </div>
-                    <!-- pagination start -->
-                    <div class="button-group-pagination">
-                        <span>Prev</span>
-                        <span class="active">1</span>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                        <a href="#">5</a>
-                        <span>...</span>
-                        <a href="#">99</a>
-                        <a href="#">Next</a>
-                    </div>
-                    <!-- pagination over -->
-                </div>
-            </section>
+            <!-- table start -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="form-group">
+                                <label class="radiocheckbox-item">
+                                    <input class="radiocheckbox" type="checkbox">
+                                    <span class="radiocheckbox-replace"></span>
+                                    <p>Select All</p>
+                                </label>
+                            </div>
+                        </th>
+                        <th>Download / Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Statements Name">
+                            <div class="form-group">
+                                <label class="radiocheckbox-item">
+                                    <input class="radiocheckbox" type="checkbox">
+                                    <span class="radiocheckbox-replace"></span>
+                                    <p><b>Issued on 11 Apr 2018</b></p>
+                                </label>
+                            </div>
+                        </td>
+                        <td class="label-none">
+                            <a class="button button-small" href="#">Download</a>
+                            <a class="button button-small" href="#" data-toggle="modal" data-target="#demo">Email</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Statements Name">
+                            <div class="form-group">
+                                <label class="radiocheckbox-item">
+                                    <input class="radiocheckbox" type="checkbox">
+                                    <span class="radiocheckbox-replace"></span>
+                                    <p><b>Issued on 11 Apr 2018</b></p>
+                                </label>
+                            </div>
+                        </td>
+                        <td class="label-none">
+                            <a class="button button-small" href="#">Download</a>
+                            <a class="button button-small" href="#" data-toggle="modal" data-target="#demo">Email</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Statements Name">
+                            <div class="form-group">
+                                <label class="radiocheckbox-item">
+                                    <input class="radiocheckbox" type="checkbox">
+                                    <span class="radiocheckbox-replace"></span>
+                                    <p><b>Issued on 11 Apr 2018</b></p>
+                                </label>
+                            </div>
+                        </td>
+                        <td class="label-none">
+                            <a class="button button-small" href="#">Download</a>
+                            <a class="button button-small" href="#" data-toggle="modal" data-target="#demo">Email</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- table over -->
+            <div class="button-group button-group-vertical">
+                <a class="button button-flat d-lg-none">Select All</a>
+                <a class="button" href="#">Download Selected</a>
+                <a class="button" href="#"data-toggle="modal" data-target="#demo">Email Selected</a>
+            </div>
         </div>
         <!-- container over -->
     </main>
@@ -217,7 +217,7 @@
     <!-- footer start -->
     <footer>
         <div class="container">
-            <img src="img/logo-footer.png">
+            <img class="d-none d-sm-block" src="img/logo-footer.png">
             <p>© weavero.co 2018 All rights reserved.</p>
         </div>
     </footer>
@@ -232,6 +232,7 @@
     <script src="js/highcharts/highcharts.js"></script>
     <script src="js/highcharts/highcharts-more.js"></script>
     <script src="js/highcharts/modules/exporting.js"></script>
+    <script src="js/swiper/swiper.min.js"></script>
     <!-- endbuild -->
     <script src="js/laydate/laydate.js"></script>
     <script src="js/scripts.js"></script>
@@ -239,7 +240,30 @@
 
     <!-- page script start -->
     <script type="text/javascript">
+        // swiper-month
+        var mySwiper = new Swiper('#years', {
+            init: false,
+            hashNavigation: true,
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        // jQuery
         jQuery(document).ready(function($) {
+            // month
+            $('#years .swiper-slide').on("click", function() {
+                $(this).addClass('active');
+                $(this).siblings().removeClass('active');
+            });
+            mySwiper.init(); //初始化
+
+            mySwiper.slideTo(0, 1000, false); //切换到第*个slide，速度为1秒
+            $('#year2018').addClass('active');
+            $('#year2018').siblings().removeClass('active');
+
         });
     </script>
     <!-- page script over -->

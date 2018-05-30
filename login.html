@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no">
-    <title>properties</title>
+    <title>login</title>
     <link rel="icon" href="favicon.ico">
     <!-- CSS start -->
     <link rel="stylesheet" href="icofont/style.css">
@@ -54,7 +54,7 @@
                 </div> -->
                 <!-- user over -->
                 <a href="index.html" class="item ">home</a>
-                <a href="properties.html" class="item active">properties</a>
+                <a href="properties.html" class="item ">properties</a>
                 <a href="multicalendar.html" class="item ">multicalendar</a>
                 <a href="income.html" class="item ">income</a>
                 <a href="statements.html" class="item ">statements</a>
@@ -74,86 +74,61 @@
                     <div class="col">
                         <!-- title start -->
                         <div class="banner-title">
-                            <h2 class="title">PROPERTIES</h2>
+                            <h2 class="title">LOGIN</h2>
+                            <small>this page is restricted</small>
                         </div>
                         <!-- title over -->
                     </div>
                 </div>
                 <!-- row over -->
-                <!-- form start -->
-                <form action="" class="form">
-                    <div class="row banner-action">
-                        <div class="col-12 col-lg-4 col-xl-3">
-                            <div class="form-group">
-                                <p class="label">Property Name</p>
-                                <input class="input" type="text" placeholder="filter by">
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-4 col-xl-3">
-                            <div class="form-group">
-                                <p class="label">Location</p>
-                                <input class="input" type="text" placeholder="filter by">
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-4 col-xl-3">
-                            <div class="form-group">
-                                <p class="label">Sort by</p>
-                                <select class="select">
-                                    <option>Properties Name</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-                <!-- form over -->
             </div>
         </div>
         <!-- banner over -->
         <!-- container start -->
         <div class="container">
-            <!-- table start -->
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Properties Name</th>
-                        <th>Location</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td data-label="Properties Name">
-                            <div class="info">
-                                <div class="image" style="background-image:url('https://dummyimage.com/90x90')"></div>
-                                <p>Amazing City View 2BR Home & FREE parking - #VIC006</p>
-                            </div>
-                        </td>
-                        <td data-label="Location">South Melbourne</td>
-                        <td data-label="Status"><span class="label">Ready</span></td>
-                    </tr>
-                    <tr>
-                        <td data-label="Properties Name">
-                            <div class="info">
-                                <div class="image" style="background-image:url('https://dummyimage.com/90x90')"></div>
-                                <p>Amazing City View 2BR Home & FREE parking - #VIC006</p>
-                            </div>
-                        </td>
-                        <td data-label="Location">South Melbourne</td>
-                        <td data-label="Status"><span class="label label-green">Ready</span></td>
-                    </tr>
-                    <tr>
-                        <td data-label="Properties Name">
-                            <div class="info">
-                                <div class="image" style="background-image:url('https://dummyimage.com/90x90')"></div>
-                                <p>Amazing City View 2BR Home & FREE parking - #VIC006</p>
-                            </div>
-                        </td>
-                        <td data-label="Location">South Melbourne</td>
-                        <td data-label="Status"><span class="label label-red">Ready</span></td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- table over -->
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+                    <!-- card start -->
+                    <section class="card card-login">
+                        <div class="card-body">
+                            <!-- form start -->
+                            <form method="post" action="http://localhost/whmcs-docker/whmcs/dologin.php" role="form"  id="login-form" onkeydown="keyLogin();">
+                                <div class="alert alert-danger" id="alert" hidden>error!</div>
+                                <input type="hidden" name="token" value="ce61621e7d442be0b84eeca1690615deb7b5041b" />
+                                <fieldset class="form-group">
+                                    <legend class="label"><b>Email Address</b></legend>
+                                    <input type="email" name="username" class="input" id="inputEmail" placeholder="Enter email" autofocus>
+                                </fieldset>
+                                <fieldset class="form-group">
+                                    <legend class="label"><b>Password</b></legend>
+                                    <input type="password" name="password" class="input" id="inputPassword" placeholder="Password" autocomplete="off">
+                                </fieldset>
+                                <fieldset class="form-group">
+                                    <label class="radiocheckbox-item">
+                                        <input type="checkbox" class="radiocheckbox" name="rememberme" hidden>
+                                        <span class="radiocheckbox-replace"></span>
+                                        <p>Remember Me</p>
+                                    </label>
+                                </fieldset>
+                                <div class="button-group">
+                                    <button type="button" class="button button-block" id="login" onclick="loginDemo();">Login</button>
+                                </div>
+                                <!-- 错误提示 -->
+                                <div class="row sundry justify-content-between">
+                                    <div class="col-auto">
+                                        <p>Logged in as Administrator | <a href="admin/">Return to Admin Area</a></p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="pwreset.php">Forgot Password?</a>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- form over -->
+                        </div>
+                    </section>
+                    <!-- card over -->
+                </div>
+            </div>
         </div>
         <!-- container over -->
     </main>
@@ -184,8 +159,26 @@
 
     <!-- page script start -->
     <script type="text/javascript">
-        jQuery(document).ready(function($) {
-        });
+        // 回车登录
+        function keyLogin() {
+            if (event.keyCode == 13) {
+                document.getElementById("login").click();
+            }
+        };
+        // login demo
+        function loginDemo() {
+            var username = $("#inputEmail").val();
+            var password = $("#inputPassword").val();
+            if (username == "" || password == "") {
+                $(".card-login").addClass("login-invalid");
+                setTimeout(function() {
+                    $(".card-login").removeClass("login-invalid");
+                }, 1000);
+                $("#alert").removeAttr('hidden');
+            } else {
+                $("#login-form").submit();
+            }
+        }
     </script>
     <!-- page script over -->
 
