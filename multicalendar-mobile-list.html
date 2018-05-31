@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no">
-    <title>404</title>
+    <title>multicalendar-list</title>
     <link rel="icon" href="favicon.ico">
     <!-- CSS start -->
     <link rel="stylesheet" href="icofont/style.css">
@@ -58,7 +58,7 @@
                 <!-- user over -->
                 <a href="index.html" class="item ">home</a>
                 <a href="properties.html" class="item ">properties</a>
-                <a href="multicalendar.html" class="item ">multicalendar</a>
+                <a href="multicalendar.html" class="item active">multicalendar</a>
                 <a href="income.html" class="item ">income</a>
                 <a href="statements.html" class="item ">statements</a>
             </nav>
@@ -69,21 +69,83 @@
 
     <!-- main start -->
     <main>
-        <!-- container start -->
-        <div class="container">
-            <!-- card start -->
-            <section class="card" style="text-align:center;border:0;margin-top:200px;margin-bottom:200px;">
-                <div class="card-body">
-                    <h1 style="margin-bottom:25px;"><i class="icon-warning"></i> Oops!</h1>
-                    <h3 style="margin-bottom:5px;">We couldn't find that page</h3>
-                    <p style="margin-bottom:25px;">Please try navigating using the options below.</p>
-                    <div class="button-group" style="justify-content:center;">
-                        <a href="http://localhost/whmcs-docker/whmcs/" class="button">Homepage</a>
-                        <a href="http://localhost/whmcs-docker/whmcs/submitticket.php" class="button">Contact Support</a>
+        <!-- banner start -->
+        <div class="banner">
+            <div class="container">
+                <!-- row start -->
+                <div class="row">
+                    <div class="col">
+                        <!-- title start -->
+                        <div class="banner-title">
+                            <h2 class="title">MULTICALENDAR</h2>
+                            <small>All your bookings in a clear calendar view.</small>
+                        </div>
+                        <!-- title over -->
                     </div>
                 </div>
-            </section>
-            <!-- card over -->
+                <!-- row over -->
+                <!-- form start -->
+                <form action="" class="form">
+                    <div class="row banner-action">
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="form-group">
+                                <p class="label">Property Name</p>
+                                <input class="input" type="text" placeholder="filter by">
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="form-group">
+                                <p class="label">Location</p>
+                                <input class="input" type="text" placeholder="filter by">
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="form-group">
+                                <p class="label">Sort by</p>
+                                <select class="select">
+                                    <option>Properties Name</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!-- form over -->
+            </div>
+        </div>
+        <!-- banner over -->
+        <!-- container start -->
+        <div class="container">
+            <!-- list start -->
+            <div class="list-multicalendar-mobile">
+                <!-- item start -->
+                <a href="multicalendar-mobile-content.html" class="item">
+                    <div class="image" style="background-image:url('https://dummyimage.com/90x90')"></div>
+                    <div class="info">
+                        <p class="title">Amazing City View 2BR Home & FREE parking - #VIC006</p>
+                        <p class="gray small">South Melbourne</p>
+                    </div>
+                </a>
+                <!-- item over -->
+                <!-- item start -->
+                <a href="multicalendar-mobile-content.html" class="item">
+                    <div class="image" style="background-image:url('https://dummyimage.com/90x90')"></div>
+                    <div class="info">
+                        <p class="title">Amazing City View 2BR Home & FREE parking - #VIC006</p>
+                        <p class="gray small">South Melbourne</p>
+                    </div>
+                </a>
+                <!-- item over -->
+                <!-- item start -->
+                <a href="multicalendar-mobile-content.html" class="item">
+                    <div class="image" style="background-image:url('https://dummyimage.com/90x90')"></div>
+                    <div class="info">
+                        <p class="title">Amazing City View 2BR Home & FREE parking - #VIC006</p>
+                        <p class="gray small">South Melbourne</p>
+                    </div>
+                </a>
+                <!-- item over -->
+            </div>
+            <!-- list over -->
         </div>
         <!-- container over -->
     </main>
@@ -114,6 +176,15 @@
 
     <!-- page script start -->
     <script type="text/javascript">
+        // jQuery
+        jQuery(document).ready(function($) {
+            // month
+            // $('#months .swiper-slide').on("click", function() {
+            //     $(this).addClass('active');
+            //     $(this).siblings().removeClass('active');
+            // });
+
+        });
     </script>
     <!-- page script over -->
 
